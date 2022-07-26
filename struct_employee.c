@@ -9,6 +9,7 @@ struct details
 } emp[5];
 int n;
 
+//Show menu
 void menu() {
     int ch;
     while(1) {
@@ -44,6 +45,7 @@ void menu() {
 
 }
 
+//Enter employees information
 void insertEmployee(){
     int i;
     printf("Enter the number of employee: \n");
@@ -61,6 +63,7 @@ void insertEmployee(){
 
 }
 
+//Display all employee information
 void getAllEmployee(int ida){
     int i;
     for (i = 0; i < ida; i++) {
@@ -68,6 +71,7 @@ void getAllEmployee(int ida){
     }
 }
 
+//Find employee by salary
 void employeeCheckSalary(int ida){
     int i;
     float salaryCheck;
@@ -83,6 +87,7 @@ void employeeCheckSalary(int ida){
     }
 }
 
+//Find employee by name
 void employeeSearch(int ida){
     int idf, i;
     int ch = 0;
