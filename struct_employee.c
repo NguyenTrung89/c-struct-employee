@@ -73,7 +73,7 @@ void getAllEmployee(int ida){
 
 //Find employee by salary
 void employeeCheckSalary(int ida){
-    int i;
+    int i, ch = 0;
     float salaryCheck;
     printf("\nDetails of Employee whose salary = ?\n>>");
     scanf("%f", &salaryCheck);
@@ -83,8 +83,10 @@ void employeeCheckSalary(int ida){
             // printf("Name: %s\n", emp[i].name);
             // printf("Salary: %f\n", emp[i].salary);
             printf("%d\t%s\t%f\n", emp[i].id, emp[i].name, emp[i].salary);
+            ch = 1;
         }
     }
+    if (ch == 0) printf("No employee with salary > %f\n", salaryCheck);
 }
 
 //Find employee by name
