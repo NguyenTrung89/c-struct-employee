@@ -9,42 +9,6 @@ struct details
 } emp[5];
 int n;
 
-//Show menu
-void menu() {
-    int ch;
-    while(1) {
-        printf("--------------------------------\n");
-        printf("\t\tMenu\n");
-        printf("--------------------------------\n");
-        printf("\n 1. Insert employee");
-        printf("\n 2. Display all employee");
-        printf("\n 3. Display employee Name by salary");
-        printf("\n 4. Search");
-        printf("\n 5. Exit");
-        printf("\nEnter your choice:");
-        scanf("\n %d", &ch);
-
-        switch(ch){
-            case 1:
-                insertEmployee();
-                break;
-            case 2:
-                getAllEmployee(n);
-                break;
-            case 3:
-                employeeCheckSalary(n);
-                break;
-            case 4:
-                employeeSearch(n);
-                break;
-            case 5:
-                exit(0);
-
-        }
-    }
-
-}
-
 //Enter employees information
 void insertEmployee(){
     int i;
@@ -105,6 +69,42 @@ void employeeSearch(int ida){
         }
     }
     if (ch == 0) printf("No employee with ID: %d\n", idf);
+}
+
+//Show menu
+void menu() {
+    int ch;
+    while(1) {
+        printf("--------------------------------\n");
+        printf("\t\tMenu\n");
+        printf("--------------------------------\n");
+        printf("\n 1. Insert employee");
+        printf("\n 2. Display all employee");
+        printf("\n 3. Display employee Name by salary");
+        printf("\n 4. Search");
+        printf("\n 5. Exit");
+        printf("\nEnter your choice:");
+        scanf("\n %d", &ch);
+
+        switch(ch){
+            case 1:
+                insertEmployee();
+                break;
+            case 2:
+                getAllEmployee(n);
+                break;
+            case 3:
+                employeeCheckSalary(n);
+                break;
+            case 4:
+                employeeSearch(n);
+                break;
+            case 5:
+                exit(0);
+
+        }
+    }
+
 }
 
 int main() {
